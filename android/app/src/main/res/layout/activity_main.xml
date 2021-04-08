@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layoutDirection="rtl"
+    android:background="@drawable/backback"
+
+    >
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:padding="4dp"
+            android:id="@+id/homecard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_home_24"
+            tools:ignore="ContentDescription"
+            />
+        <ImageView
+            android:padding="4dp"
+            android:id="@+id/arducard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_baseline_developer_board_24"
+            tools:ignore="ContentDescription"
+            />
+    </LinearLayout>
+<androidx.cardview.widget.CardView
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:visibility="gone"
+    android:id="@+id/maincard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    app:cardCornerRadius="20dp"
+
+    >
+    <LinearLayout
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Arduino"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            />
+    <EditText
+        android:id="@+id/GPIO"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="GPio"
+        />
+    <EditText
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
+        android:id="@+id/State"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="state"
+        app:layout_constraintTop_toBottomOf="@+id/GPIO" />
+        <Button
+            android:layout_marginTop="8dp"
+            android:id="@+id/Sendbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_btn_login"
+            android:text="send"
+            />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+<androidx.cardview.widget.CardView
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:visibility="visible"
+    android:id="@+id/myhome"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    app:cardCornerRadius="20dp"
+    >
+    <ImageView
+        android:id="@+id/refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_refresh_24"
+        android:layout_gravity="left"
+        tools:ignore="RtlHardcoded"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="24dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="HOME"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:id="@+id/hometitle"
+            />
+        <TextView
+            android:id="@+id/homestatues"
+            android:layout_below="@id/hometitle"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="12dp"
+            android:text="home is unsafe"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="@color/unsafe"
+             />
+
+        <Button
+            android:id="@+id/homebtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/homestatues"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_btn_login3"
+            android:text="change" />
+
+        <Button
+            android:id="@+id/starter"
+            android:layout_below="@id/homebtn"
+
+            android:layout_width="match_parent"
+            android:layout_marginTop="16dp"
+            android:text="Start"
+            android:background="@drawable/bg_btn_login"
+            android:layout_height="wrap_content"
+            />
+        <Button
+            android:id="@+id/closer"
+            android:layout_below="@id/starter"
+
+            android:layout_width="match_parent"
+            android:layout_marginTop="16dp"
+            android:text="close"
+            android:background="@drawable/bg_btn_login2"
+            android:layout_height="wrap_content"
+            />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+</RelativeLayout>
