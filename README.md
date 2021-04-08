@@ -10,7 +10,7 @@ The home alarm system, which uses the Arduino board and ultrasonic sensor . as s
 6- bread board
 7- internet connection
 
-it also require's a minimum familiarity to **C and **php language and also 
+it also require's a minimum familiarity to **C** and **php** language .
 # setting up arduino
 
 
